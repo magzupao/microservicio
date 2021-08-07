@@ -25,7 +25,6 @@
                     <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="name"><span jhiTranslate="gateApp.blog.name">Name</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="handle"><span jhiTranslate="gateApp.blog.handle">Handle</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="userLogin"><span jhiTranslate="gateApp.blog.user">User</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -34,9 +33,6 @@
                     <td><a [routerLink]="['/blog', blog.id, 'view']">{{ blog.id }}</a></td>
                     <td>{{ blog.name }}</td>
                     <td>{{ blog.handle }}</td>
-                    <td>
-                        {{ blog.userLogin }}
-                    </td>
                     <td class="text-right">
                         <div class="btn-group">
                             <button type="submit"

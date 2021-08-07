@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: INFO
     io.github.jhipster: INFO
-    cat.gencat.darp.ervc: INFO
+    com.gate: INFO
 
 management:
   metrics:
@@ -120,7 +120,7 @@ jhipster:
         # - In the JHipster Registry (which includes a Spring Cloud Config server)
         # - In a separate `application-prod.yml` file, in the same folder as your executable JAR file
         # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
-        base64-secret: MGQ0ZjY0ZjRjN2RlYzgyMDVhMmZlNmEwNDlkNDFiN2UxOTJhZjYxNmNlYTdhNDE2NzZhNDZkOTYzMzJmNTk3M2UwNDQ1ODkwZGEzZjVhNzc5MDU1NDNjNmYzZThjMDE2NDFhYTM0MDM4YjEwMDgyY2Q4MDA2ZjE0ZGI5NGI5YzM=
+        base64-secret: MjcyNjJkM2MxN2M4OGYxNzE5YWVmOTQwMTIyMDA2ZTI5MTUwZjM0MmVkZmY4ZGNhYjA1YTQ1NzNhM2M1YzliZDZjODljYmI4NWVhYjA4OGUzYTkxMGJhNjgwZmZmYjRhM2UzYzM5NDY0MzE1ZGRlMTI1M2YwNTYwNTUxMTM0OTI=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

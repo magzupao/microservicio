@@ -21,7 +21,7 @@
             "ownerSide": false
         }
     ],
-    "changelogDate": "20210807102200",
+    "changelogDate": "20210807110300",
     "entityTableName": "tag",
     "dto": "mapstruct",
     "pagination": "pagination",

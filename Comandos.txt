@@ -1,0 +1,14 @@
+container_name: mariadb
+
+docker container exec -u root -it mariadb bash
+
+CREATE DATABASE micro DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+GRANT ALL ON micro.* TO 'root'@'%';
+FLUSH PRIVILEGES;
+
+CREATE DATABASE gate DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+GRANT ALL ON gate.* TO 'root'@'%';
+FLUSH PRIVILEGES;
+
+
+

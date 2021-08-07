@@ -1,0 +1,61 @@
+
+application {
+  config {
+    baseName gate
+    applicationType gateway
+    packageName com.gate
+    authenticationType jwt
+    prodDatabaseType mariadb
+    devDatabaseType mariadb
+    clientFramework angularX
+    serviceDiscoveryType consul
+    buildTool maven
+    testFrameworks [gatling] 
+    dtoSuffix DTO    
+  }
+  entities *
+}
+
+application {
+  config {
+    baseName micro
+    applicationType microservice
+    packageName com.micro
+    authenticationType jwt
+    devDatabaseType mariadb
+    prodDatabaseType mariadb
+    serviceDiscoveryType consul
+    buildTool maven    
+    testFrameworks [gatling]
+    dtoSuffix DTO
+  }
+  entities Blog, Entry, Tag
+}
+
+entity Blog {
+    name String required minlength(3),
+    handle String required minlength(2)
+}
+
+entity Entry {
+    title String required,
+    content TextBlob required,
+    date ZonedDateTime required
+}
+
+entity Tag {
+    name String required minlength(2)
+}
+
+relationship ManyToOne {
+    Entry{blog(name)} to Blog
+}
+
+relationship ManyToMany {
+    Entry{tag(name)} to Tag{entry}
+}
+
+dto all with mapstruct
+paginate Entry, Blog, Tag with pagination
+service all with serviceClass
+
