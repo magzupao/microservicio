@@ -1,13 +1,15 @@
 version: '2'
 services:
   micro-mariadb:
-    container_name: mariadb
+    container_name: micro-mariadb
     image: mariadb:10.4.12
-    # volumes:
-    #     - ~/volumes/jhipster/micro/mysql/:/var/lib/mysql/
+    volumes:
+      - ~/data/micro/mysql/:/var/lib/mysql/
+      - ~/data/micro/backup/:/home/data/backup/
     environment:
-      - MYSQL_USER=root
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_PASSWORD=developer
+      - MYSQL_USER=developer
+      - MYSQL_PASSWORD=developer
       - MYSQL_DATABASE=micro
     ports:
       - 3306:3306

@@ -35,13 +35,13 @@ spring:
     consul:
       discovery:
         prefer-ip-address: true
-      host: localhost
+      host: consul
       port: 8500
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mariadb://localhost:3306/gate?useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: root
-    password:
+    url: jdbc:mariadb://micro-mariadb:3306/gate?useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: developer
+    password: developer
     hikari:
       poolName: Hikari
       auto-commit: false
