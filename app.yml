@@ -1,5 +1,5 @@
 #esta es la version estable a utilizar 14 Agosto 2021
-# docker network create --gateway 172.20.0.1 --subnet 172.20.0.0/16 microred
+# docker network create --gateway 182.20.0.1 --subnet 182.20.0.0/16 microred
 #
 version: '3'
 
@@ -22,7 +22,7 @@ services:
 #    command: bash -c "./mvnw -Pprod clean verify -DskipTests && java -jar target/gate.jar --server.servlet.context-path=/gate/"
     networks:
       net-micro:
-        ipv4_address: 172.20.0.2
+        ipv4_address: 182.20.0.2
 
   micro:
     container_name: micro-back
@@ -42,7 +42,7 @@ services:
 #    command: bash -c "./mvnw -Pprod clean verify -DskipTests && java -jar target/micro.jar --server.servlet.context-path=/micro/"
     networks:
       net-micro:
-        ipv4_address: 172.20.0.4
+        ipv4_address: 182.20.0.4
 
   micro-mariadb:
     container_name: micro-mariadb
@@ -62,7 +62,7 @@ services:
     command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
     networks:
       net-micro:
-        ipv4_address: 172.20.0.6          
+        ipv4_address: 182.20.0.6          
 
   consul:
     container_name: micro-consul
@@ -76,7 +76,7 @@ services:
     command: consul agent -dev -ui -client 0.0.0.0
     networks:
       net-micro:
-        ipv4_address: 172.20.0.8
+        ipv4_address: 182.20.0.8
         
   consul-config-loader:
     image: jhipster/consul-config-loader:v0.3.0
@@ -95,7 +95,7 @@ services:
     # - CONFIG_MODE=git
     networks:
       net-micro:
-        ipv4_address: 172.20.0.10
+        ipv4_address: 182.20.0.10
       
 networks:
   net-micro:
