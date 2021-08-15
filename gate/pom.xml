@@ -364,6 +364,7 @@
 
     <build>
         <defaultGoal>spring-boot:run</defaultGoal>
+        <finalName>gate</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
